@@ -12,3 +12,11 @@ body {
   background: rgb(248, 216, 231);
   background: linear-gradient(90deg, rgba(248, 216, 231, 1) 0%, rgba(207, 230, 253, 1) 100%);
 }
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,185 @@
+@import "@radix-ui/colors/blackA.css";
+@import "@radix-ui/colors/mauve.css";
+@import "@radix-ui/colors/violet.css";
+@import "@radix-ui/colors/blue.css";
+
+button {
+  all: unset;
+}
+
+.DropdownMenuContent,
+.DropdownMenuSubContent {
+  min-width: 150px;
+  background-color: white;
+  border-radius: 6px;
+  padding: 5px;
+  box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+  animation-duration: 400ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.DropdownMenuSubContent {
+  min-width: 100px;
+}
+
+.DropdownMenuContent[data-side="top"],
+.DropdownMenuSubContent[data-side="top"] {
+  animation-name: slideDownAndFade;
+}
+.DropdownMenuContent[data-side="right"],
+.DropdownMenuSubContent[data-side="right"] {
+  animation-name: slideLeftAndFade;
+}
+.DropdownMenuContent[data-side="bottom"],
+.DropdownMenuSubContent[data-side="bottom"] {
+  animation-name: slideUpAndFade;
+}
+.DropdownMenuContent[data-side="left"],
+.DropdownMenuSubContent[data-side="left"] {
+  animation-name: slideRightAndFade;
+}
+
+.DropdownMenuItem,
+.DropdownMenuCheckboxItem,
+.DropdownMenuSubTrigger {
+  font-size: 13px;
+  line-height: 1;
+  color: black;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  height: 27px;
+  padding: 0 5px;
+  position: relative;
+  padding-left: 25px;
+  user-select: none;
+  outline: none;
+}
+.DropdownMenuSubTrigger[data-state="open"] {
+  background-color: var(--blue4);
+  color: var(--blue11);
+}
+
+.DropdownMenuTrigger[data-state="open"] {
+  background-color: #f5f1f8;
+}
+.DropdownMenuItem[data-disabled],
+.DropdownMenuCheckboxItem[data-disabled],
+.DropdownMenuSubTrigger[data-disabled] {
+  color: var(--mauve8);
+  pointer-events: none;
+}
+.DropdownMenuItem[data-highlighted],
+.DropdownMenuCheckboxItem[data-highlighted],
+.DropdownMenuSubTrigger[data-highlighted] {
+  background-color: var(--blue9);
+  color: var(--blue1);
+}
+
+.DropdownMenuLabel {
+  padding-left: 25px;
+  font-size: 12px;
+  line-height: 25px;
+  color: var(--mauve11);
+}
+
+.DropdownMenuSeparator {
+  height: 1px;
+  background-color: var(--blackA5);
+  margin: 6px 0;
+  margin-right: 5px;
+  margin-left: 25px;
+}
+
+.DropdownMenuItemIndicator {
+  position: absolute;
+  left: 0;
+  width: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.DropdownMenuArrow {
+  fill: white;
+}
+
+.DropdownMenuButton {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  display: inline-flex;
+  height: 30px;
+  width: 97px;
+  align-items: center;
+  justify-content: space-evenly;
+  color: black;
+  background-color: white;
+  box-shadow: 0 2px 10px var(--blackA7);
+  opacity: 100%;
+}
+.DropdownMenuButton:hover {
+  background-color: var(--blackA7);
+}
+.DropdownMenuButton:focus {
+  background-color: var(--blackA7);
+}
+
+.RightSlot {
+  margin-left: auto;
+  margin-right: 5px;
+  padding-left: 20px;
+  color: var(--mauve11);
+}
+[data-highlighted] > .RightSlot {
+  color: white;
+}
+[data-disabled] .RightSlot {
+  color: var(--mauve8);
+}
+
+@keyframes slideUpAndFade {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRightAndFade {
+  from {
+    opacity: 0;
+    transform: translateX(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDownAndFade {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeftAndFade {
+  from {
+    opacity: 0;
+    transform: translateX(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
