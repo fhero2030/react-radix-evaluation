@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+
+body {
+  background: rgb(248, 216, 231);
+  background: linear-gradient(90deg, rgba(248, 216, 231, 1) 0%, rgba(207, 230, 253, 1) 100%);
+}
